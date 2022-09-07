@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -38,5 +38,7 @@ jobs:
           mvn --version
           echo what is git version
           git --version
-          cd C:\Users\anees\Desktop
-          c.bat
+          
+      - name: Run a sh file
+        run: sh ./githubaction.sh 
+        
